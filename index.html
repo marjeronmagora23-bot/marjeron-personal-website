@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yanniee Fan Page</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="petals"></div>
+
+<header>
+
+<nav>
+
+<div class="logo">
+🌸 Yanniee
+</div>
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#gallery">Gallery</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section id="home" class="hero">
+
+<div class="left">
+
+<h3>Welcome to the Fan Page of</h3>
+
+<h1>Yanniee</h1>
+
+<p>
+
+A fan-made website dedicated to the beautiful and talented TikTok creator
+Yanniee. Thank you for always making people smile through your wonderful
+videos and personality.
+
+</p>
+
+<a href="https://www.tiktok.com/@yannie_mnd" target="_blank" class="btn">
+Visit TikTok
+</a>
+
+</div>
+
+<div class="right">
+
+<img src="photo1.jpg" alt="Yanniee">
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2>About Yanniee</h2>
+
+<p>
+
+Yanniee is a talented TikTok creator admired by thousands of fans.
+Her creativity, beauty and positive personality make every video enjoyable.
+This fan page was created with love to show appreciation and support for her amazing content.
+
+</p>
+
+</section>
+<section id="gallery">
+
+<h2>Gallery</h2>
+
+<div class="gallery">
+
+<img src="photo1.jpg" alt="Yanniee">
+
+<img src="photo2.jpg" alt="Yanniee">
+
+</div>
+
+</section>
+
+<section class="fan-message">
+
+<h2>Dear Yanniee ❤️</h2>
+
+<p>
+
+Thank you for always bringing joy and happiness through your content.
+Your smile, creativity, and positivity inspire so many people every day.
+This website is made with admiration and appreciation from a fan.
+
+</p>
+
+</section>
+<section id="videos">
+
+<h2>Featured Video</h2>
+
+<div class="tiktok-player">
+
+<video controls playsinline poster="photo1.jpg">
+<source src="video.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<div class="video-actions">
+
+    <button id="likeBtn">❤️<br><span id="likeText">Like</span></button>
+
+    <button id="commentBtn">💬<br><span>Comment</span></button>
+
+ <div id="comments"></div>
+
+<input id="commentInput" type="text" placeholder="Write a comment...">
+
+<button id="postComment">Send</button>
+
+<button id="shareBtn">📤<br><span>Share</span></button>
+</div>
+
+</div>
+
+</section>
+<footer>
+
+<p>🌸 Made with Love for Yanniee 🌸
+By Marjeron M. Eckman</p>
+
+<p>Fan Website • @yannie_mnd</p>
+
+</footer>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getDatabase } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyASrq0141Uq20up-7YURruddFHSLvPJK_A",
+    authDomain: "yanniee-fan-website.firebaseapp.com",
+    databaseURL: "https://yanniee-fan-website-default-rtdb.firebaseio.com",
+    projectId: "yanniee-fan-website",
+    storageBucket: "yanniee-fan-website.firebasestorage.app",
+    messagingSenderId: "163353916993",
+    appId: "1:163353916993:web:d367c6cab24e32d9bfb8c0",
+    measurementId: "G-HTHPS1K07J"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+
+  window.database = database;
+</script>
+
+<script type="module" src="script.js"></script>
