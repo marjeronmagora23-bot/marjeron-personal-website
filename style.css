@@ -301,6 +301,18 @@ width:90%;
     color:#444;
 }
 
+.hero p:first-child {
+    color: #00eaff;
+}
+
+.hero p:nth-child(2) {
+    color: #ff4fa3;
+}
+
+section h2 {
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
+}
 #commentInput{
     padding:10px;
     border:1px solid #ddd;
@@ -313,16 +325,4 @@ width:90%;
     color:white;
     padding:10px;
     border-radius:8px;
-}
-.hero p:first-child {
-    color: #00eaff;
-}
-
-.hero p:nth-child(2) {
-    color: #ff4fa3;
-}
-
-section h2 {
-    color: #00eaff;
-    text-shadow: 0 0 10px #00eaff;
 }
