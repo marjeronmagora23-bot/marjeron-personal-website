@@ -88,48 +88,10 @@ if (shareBtn) {
 
 // FIREBASE COMMENTS
 
-const postComment = document.getElementById("postComment");
-const commentInput = document.getElementById("commentInput");
-const comments = document.getElementById("comments");
-
-
-if (postComment) {
-
-    postComment.onclick = function() {
-
-        const text = commentInput.value;
-
-        if (text.trim() !== "") {
-console.log(window.database);
-            push(ref(window.database, "comments"), {
-                message: text
-            });
-
-            commentInput.value = "";
-
-        }
-
-    };
-
-}
-
-
-if (comments) {
-
-    onValue(ref(window.database, "comments"), function(snapshot) {
-
-        comments.innerHTML = "";
-
-        snapshot.forEach(function(child) {
-
-            const p = document.createElement("p");
-
-            p.textContent = "💬 " + child.val().message;
-
-            comments.appendChild(p);
-
-        });
-
-    });
-
+#comments p {
+    color: white;
+    background: #111827;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
 }
