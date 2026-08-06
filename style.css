@@ -333,3 +333,62 @@ section h2 {
     border-radius: 10px;
     margin: 5px;
 }
+.profile-card {
+
+    width: 300px;
+    padding: 25px;
+    background: rgba(10, 15, 30, 0.9);
+    border: 2px solid #00eaff;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px #00eaff;
+
+}
+
+
+.profile-image img {
+
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff4fa3;
+    box-shadow: 0 0 15px #ff4fa3;
+
+}
+
+
+.profile-card h2 {
+
+    color: #00eaff;
+    margin-top: 15px;
+
+}
+
+
+.role {
+
+    color: #ff4fa3;
+    font-weight: bold;
+
+}
+
+
+.status {
+
+    color: white;
+    font-size: 14px;
+
+}
+
+
+.skills span {
+
+    display: inline-block;
+    margin: 5px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid #00eaff;
+    color: #00eaff;
+
+}
