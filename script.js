@@ -1,5 +1,5 @@
-alert("Script is working");
 console.log("Script loaded");
+
 import { ref, push, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
 
@@ -71,8 +71,8 @@ if (shareBtn) {
         if (navigator.share) {
 
             navigator.share({
-                title: "Yanniee Fan Website",
-                text: "Check out this video!",
+                title: "Marjeron Personal Website",
+                text: "Check out my website!",
                 url: window.location.href
             });
 
@@ -89,10 +89,48 @@ if (shareBtn) {
 
 // FIREBASE COMMENTS
 
-#comments p {
-    color: white;
-    background: #111827;
-    padding: 10px;
-    border-radius: 10px;
-    margin: 5px;
+const postComment = document.getElementById("postComment");
+const commentInput = document.getElementById("commentInput");
+const comments = document.getElementById("comments");
+
+
+if (postComment) {
+
+    postComment.onclick = function() {
+
+        const text = commentInput.value;
+
+        if (text.trim() !== "") {
+
+            push(ref(window.database, "comments"), {
+                message: text
+            });
+
+            commentInput.value = "";
+
+        }
+
+    };
+
+}
+
+
+if (comments) {
+
+    onValue(ref(window.database, "comments"), function(snapshot) {
+
+        comments.innerHTML = "";
+
+        snapshot.forEach(function(child) {
+
+            const p = document.createElement("p");
+
+            p.textContent = "💬 " + child.val().message;
+
+            comments.appendChild(p);
+
+        });
+
+    });
+
 }
