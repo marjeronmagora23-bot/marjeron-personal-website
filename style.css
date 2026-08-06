@@ -6,10 +6,11 @@ scroll-behavior:smooth;
 font-family:'Poppins',sans-serif;
 }
 
-body{
-background:linear-gradient(135deg,#ffd6e7,#ffeef5);
-color:#444;
-overflow-x:hidden;
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #080b16;
+    color: #ffffff;
 }
 
 #petals{
@@ -69,13 +70,13 @@ align-items:center;
 
 }
 
-.logo{
-
-font-size:32px;
-font-family:'Dancing Script',cursive;
-color:#ff4f9a;
-
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
 }
+
 
 nav ul{
 
@@ -138,22 +139,21 @@ line-height:1.8;
 
 }
 
-.btn{
-
-display:inline-block;
-padding:15px 35px;
-background:#ff4f9a;
-color:white;
-border-radius:40px;
-text-decoration:none;
-transition:.3s;
-
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: transparent;
+    border: 2px solid #ff4fa3;
+    color: #ff4fa3;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.btn:hover{
-
-transform:scale(1.08);
-
+.btn:hover {
+    background: #ff4fa3;
+    color: white;
+    box-shadow: 0 0 20px #ff4fa3;
 }
 
 .right{
@@ -313,4 +313,16 @@ width:90%;
     color:white;
     padding:10px;
     border-radius:8px;
+}
+.hero p:first-child {
+    color: #00eaff;
+}
+
+.hero p:nth-child(2) {
+    color: #ff4fa3;
+}
+
+section h2 {
+    color: #00eaff;
+    text-shadow: 0 0 10px #00eaff;
 }
