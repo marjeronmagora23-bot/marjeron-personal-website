@@ -27,6 +27,7 @@
 <li><a href="#home">🏠 Home</a></li>
 <li><a href="#about">👨‍💻 About Me</a></li>
 <li><a href="#gallery">📸 Gallery</a></li>
+<li><a href="#videos">🎥 Videos</a></li>
 <li><a href="#contact">📩 Contact</a></li>
 
 </ul>
@@ -159,69 +160,45 @@ This website is made with admiration and appreciation from a lover boy HAHAHA.
 </p>
 
 </section>
+
+
+
+
 <section id="videos">
 
-<h2>🎥 Featured Videos</h2>
-
-<div class="video-grid">
+<h2>🎥 Featured Video</h2>
 
 <div class="video-card">
-<video controls playsinline poster="photo1.jpg">
-<source src="video1.mp4" type="video/mp4">
+
+<video id="mainVideo" controls playsinline poster="photo1.jpg">
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
 </video>
-<p>🎬 Video 1</p>
-</div>
-
-<div class="video-card">
-<video controls playsinline poster="photo2.jpg">
-<source src="video2.mp4" type="video/mp4">
-</video>
-<p>🎬 Video 2</p>
-</div>
-
-<div class="video-card">
-<video controls playsinline poster="photo3.jpg">
-<source src="video3.mp4" type="video/mp4">
-</video>
-<p>🎬 Video 3</p>
-</div>
-
-<div class="video-card">
-<video controls playsinline poster="photo4.jpg">
-<source src="video4.mp4" type="video/mp4">
-</video>
-<p>🎬 Video 4</p>
-</div>
-
-<div class="video-card">
-<video controls playsinline poster="photo5.jpg">
-<source src="video5.mp4" type="video/mp4">
-</video>
-<p>🎬 Video 5</p>
-</div>
-
-</div>
-
-</section>
 
 <div class="video-actions">
+
+    <button id="prevVideo">⬅️ Previous</button>
 
     <button id="likeBtn">❤️<br><span id="likeText">Like</span></button>
 
     <button id="commentBtn">💬<br><span>Comment</span></button>
 
- <div id="comments"></div>
+    <button id="shareBtn">📤<br><span>Share</span></button>
+
+    <button id="nextVideo">Next ➡️</button>
+
+</div>
+
+<div id="comments"></div>
 
 <input id="commentInput" type="text" placeholder="Write a comment...">
 
 <button id="postComment">Send</button>
 
-<button id="shareBtn">📤<br><span>Share</span></button>
-</div>
-
 </div>
 
 </section>
+
 <footer>
 
 <p> 😘Made with Love for Hannah😘
