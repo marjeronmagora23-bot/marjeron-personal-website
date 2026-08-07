@@ -3,35 +3,36 @@ console.log("Script loaded");
 import { ref, push, onValue } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
 
-// PETALS
 
-const petals = document.getElementById("petals");
+   // CYBER PARTICLES
 
-function createPetal() {
+const particles = document.getElementById("particles");
 
-    if (!petals) return;
+function createParticle(){
 
-    const petal = document.createElement("div");
+    if(!particles) return;
 
-    petal.classList.add("petal");
+    const particle = document.createElement("div");
 
-    petal.style.left = Math.random() * window.innerWidth + "px";
+    particle.className = "particle";
 
-    petal.style.animationDuration = (5 + Math.random() * 5) + "s";
+    particle.style.left = Math.random()*100 + "%";
 
-    petal.style.opacity = Math.random();
+    particle.style.animationDuration = (4 + Math.random()*5) + "s";
 
-    petal.style.transform = `scale(${0.5 + Math.random()})`;
+    particle.style.opacity = Math.random();
 
-    petals.appendChild(petal);
+    particle.style.transform = `scale(${0.5 + Math.random()*2})`;
 
-    setTimeout(() => {
-        petal.remove();
-    }, 10000);
+    particles.appendChild(particle);
+
+    setTimeout(()=>{
+        particle.remove();
+    },9000);
 
 }
 
-setInterval(createPetal, 300);
+setInterval(createParticle,120);
 
 
 // LIKE BUTTON
