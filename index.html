@@ -432,14 +432,26 @@ document.getElementById("visitorCount").innerHTML =
 
 
 <script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
-// Firebase config here
+const firebaseConfig = {
+  apiKey: "AIzaSyASrq0141Uq20up-7YURruddFHSLvPJK_A",
+  authDomain: "yanniee-fan-website.firebaseapp.com",
+  databaseURL: "https://yanniee-fan-website-default-rtdb.firebaseio.com",
+  projectId: "yanniee-fan-website",
+  storageBucket: "yanniee-fan-website.firebasestorage.app",
+  messagingSenderId: "163353916993",
+  appId: "1:163353916993:web:d367c6cab24e32d9bfb8c0"
+};
+
+const app = initializeApp(firebaseConfig);
+
+window.database = getDatabase(app);
+
+// Tell script.js Firebase is ready
+window.dispatchEvent(new Event("firebaseReady"));
 
 </script>
 
 <script type="module" src="script.js"></script>
-
-
-</body>
-
-</html>
