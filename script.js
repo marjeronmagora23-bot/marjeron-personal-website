@@ -223,7 +223,12 @@ if (closeViewer) {
 
     closeViewer.addEventListener("click", () => {
 
-        imageViewer.style.display = "none";
+        viewerImage.style.transform = "scale(0.8)";
+viewerImage.style.opacity = "0";
+
+setTimeout(() => {
+    imageViewer.style.display = "none";
+}, 250);
 
     });
 
@@ -235,7 +240,12 @@ if (imageViewer) {
 
         if (e.target === imageViewer) {
 
-            imageViewer.style.display = "none";
+            viewerImage.style.transform = "scale(0.8)";
+viewerImage.style.opacity = "0";
+
+setTimeout(() => {
+    imageViewer.style.display = "none";
+}, 250);
 
         }
 
