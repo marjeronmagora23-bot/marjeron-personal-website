@@ -172,3 +172,24 @@ if (prevBtn) {
         loadVideo(currentVideo);
     };
 }
+// TYPING EFFECT
+
+const typing = document.getElementById("typing");
+
+const text = "💻 BSIT Student | Future Developer | Lover Boy 😎";
+
+let i = 0;
+
+function typeWriter() {
+
+    if (!typing) return;
+
+    if (i < text.length) {
+        typing.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 70);
+    }
+
+}
+
+typeWriter();
