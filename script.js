@@ -134,3 +134,41 @@ if (comments) {
     });
 
 }
+// VIDEO PLAYLIST
+
+const videos = [
+    "video.mp4",
+    "video2.mp4",
+    "video3.mp4",
+    "video4.mp4",
+    "video5.mp4"
+];
+
+let currentVideo = 0;
+
+const videoPlayer = document.getElementById("mainVideo");
+const source = videoPlayer ? videoPlayer.querySelector("source") : null;
+
+const nextBtn = document.getElementById("nextVideo");
+const prevBtn = document.getElementById("prevVideo");
+
+function loadVideo(index) {
+    if (!videoPlayer || !source) return;
+
+    source.src = videos[index];
+    videoPlayer.load();
+}
+
+if (nextBtn) {
+    nextBtn.onclick = () => {
+        currentVideo = (currentVideo + 1) % videos.length;
+        loadVideo(currentVideo);
+    };
+}
+
+if (prevBtn) {
+    prevBtn.onclick = () => {
+        currentVideo = (currentVideo - 1 + videos.length) % videos.length;
+        loadVideo(currentVideo);
+    };
+}
