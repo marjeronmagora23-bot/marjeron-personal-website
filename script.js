@@ -1,6 +1,14 @@
 console.log("Script loaded");
 
-
+window.push(window.ref(window.database, "comments"), {
+    message: text
+})
+.then(() => {
+    console.log("Comment sent!");
+})
+.catch((error) => {
+    console.log("Firebase error:", error);
+});
 
 // =====================
 // CYBER PARTICLES
