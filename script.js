@@ -264,3 +264,25 @@ document.addEventListener("mousemove",(e)=>{
     cursorGlow.style.top = e.clientY + "px";
 
 });
+// LOADING SCREEN
+
+window.addEventListener("load",()=>{
+
+    setTimeout(()=>{
+
+        const loading=document.getElementById("loading-screen");
+
+        if(loading){
+
+            loading.style.opacity="0";
+            loading.style.transition="0.6s";
+
+            setTimeout(()=>{
+                loading.remove();
+            },600);
+
+        }
+
+    },2500);
+
+});
