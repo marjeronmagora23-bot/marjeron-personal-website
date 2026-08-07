@@ -252,7 +252,26 @@ This website is made with admiration and appreciation from a lover boy HAHAHA.
 
 <input id="commentInput" type="text" placeholder="Write a comment...">
 
-<button id="postComment">Send</button>
+<button id="postComment">Send
+<script type="module">
+  // Import Firebase
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+  import { getDatabase, ref, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+  const firebaseConfig = {
+    // PASTE YOUR FIREBASE CONFIG HERE
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+
+  const counter = ref(database, "visitors");
+
+  runTransaction(counter, (current) => {
+    return (current || 0) + 1;
+  });
+</script>
+</button>
 
 </div>
 
