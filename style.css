@@ -607,3 +607,37 @@ section h2 {
     }
 
 }
+/* CYBER NAME */
+
+.cyber-name{
+    font-size:48px;
+    color:#00eaff;
+    text-shadow:
+        0 0 10px #00eaff,
+        0 0 20px #00eaff,
+        0 0 40px #00eaff;
+    animation: glow 2s infinite alternate;
+}
+
+.cyber-role{
+    color:#b9f9ff;
+    font-size:18px;
+    margin-top:10px;
+}
+
+@keyframes glow{
+
+    from{
+        text-shadow:
+        0 0 10px #00eaff,
+        0 0 20px #00eaff;
+    }
+
+    to{
+        text-shadow:
+        0 0 20px #00eaff,
+        0 0 40px #00eaff,
+        0 0 70px #00eaff;
+    }
+
+}
