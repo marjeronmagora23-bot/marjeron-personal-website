@@ -348,3 +348,20 @@ topBtn.addEventListener("click",()=>{
     });
 
 });
+// LIVE CLOCK
+
+function updateClock() {
+
+    const clock = document.getElementById("clock");
+
+    if (!clock) return;
+
+    const now = new Date();
+
+    clock.innerHTML = now.toLocaleString();
+
+}
+
+setInterval(updateClock, 1000);
+
+updateClock();
