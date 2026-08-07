@@ -115,85 +115,60 @@ if(shareBtn){
 // FIREBASE COMMENTS
 // =====================
 
+window.addEventListener("firebaseReady", () => {
+
 const postComment = document.getElementById("postComment");
-
 const commentInput = document.getElementById("commentInput");
-
 const comments = document.getElementById("comments");
-
-
 
 if(postComment){
 
-    postComment.onclick = function(){
+postComment.onclick = () => {
 
+const text = commentInput.value;
 
-        if(!window.database){
+if(text.trim() !== ""){
 
-            alert("Firebase loading...");
+push(ref(window.database,"comments"), {
+message:text
+});
 
-            return;
+commentInput.value="";
 
-        }
+}
 
-
-        const text = commentInput.value;
-
-
-        if(text.trim() !== ""){
-
-
-            push(ref(window.database,"comments"),{
-
-                message:text
-
-            });
-
-
-            commentInput.value="";
-
-
-        }
-
-
-    };
-
+};
 
 }
 
 
+if(comments){
 
-if(comments && window.database){
+onValue(ref(window.database,"comments"),(snapshot)=>{
 
+comments.innerHTML="";
 
-    onValue(ref(window.database,"comments"),function(snapshot){
+snapshot.forEach((child)=>{
 
+const p=document.createElement("p");
 
-        comments.innerHTML="";
+p.textContent="💬 "+child.val().message;
 
+comments.appendChild(p);
 
-        snapshot.forEach(function(child){
+});
 
-
-            const p=document.createElement("p");
-
-
-            p.textContent="💬 " + child.val().message;
-
-
-            comments.appendChild(p);
-
-
-        });
-
-
-    });
-
+});
 
 }
 
+});
+            
 
+            
 
+    
+            
 
 // =====================
 // VIDEO PLAYLIST
