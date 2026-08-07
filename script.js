@@ -208,7 +208,12 @@ galleryImages.forEach(img => {
     img.addEventListener("click", () => {
 
         imageViewer.style.display = "flex";
-        viewerImage.src = img.src;
+viewerImage.src = img.src;
+
+setTimeout(() => {
+    viewerImage.style.transform = "scale(1)";
+    viewerImage.style.opacity = "1";
+}, 10);
 
     });
 
