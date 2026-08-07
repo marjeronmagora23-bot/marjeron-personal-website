@@ -667,3 +667,27 @@ section h2 {
 .light-mode footer{
     background:#ffffff;
 }
+/* SCROLL TO TOP BUTTON */
+
+#topBtn{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#00eaff;
+    color:#000;
+    font-size:22px;
+    cursor:pointer;
+    display:none;
+    box-shadow:0 0 20px #00eaff;
+    z-index:9999;
+    transition:.3s;
+}
+
+#topBtn:hover{
+    transform:scale(1.15);
+    box-shadow:0 0 35px #00eaff;
+}
