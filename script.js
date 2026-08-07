@@ -193,3 +193,47 @@ function typeWriter() {
 }
 
 typeWriter();
+
+// =====================
+// GALLERY IMAGE VIEWER
+// =====================
+
+const galleryImages = document.querySelectorAll(".gallery img");
+const imageViewer = document.getElementById("imageViewer");
+const viewerImage = document.getElementById("viewerImage");
+const closeViewer = document.getElementById("closeViewer");
+
+galleryImages.forEach(img => {
+
+    img.addEventListener("click", () => {
+
+        imageViewer.style.display = "flex";
+        viewerImage.src = img.src;
+
+    });
+
+});
+
+if (closeViewer) {
+
+    closeViewer.addEventListener("click", () => {
+
+        imageViewer.style.display = "none";
+
+    });
+
+}
+
+if (imageViewer) {
+
+    imageViewer.addEventListener("click", (e) => {
+
+        if (e.target === imageViewer) {
+
+            imageViewer.style.display = "none";
+
+        }
+
+    });
+
+}
