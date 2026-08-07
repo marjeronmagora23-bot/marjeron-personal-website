@@ -307,3 +307,22 @@ hiddenElements.forEach((el) => {
     el.classList.add("hidden");
     observer.observe(el);
 });
+// DARK/LIGHT MODE
+
+const themeToggle = document.getElementById("themeToggle");
+
+if(themeToggle){
+
+    themeToggle.onclick = ()=>{
+
+        document.body.classList.toggle("light-mode");
+
+        if(document.body.classList.contains("light-mode")){
+            themeToggle.textContent="🌞";
+        }else{
+            themeToggle.textContent="🌙";
+        }
+
+    };
+
+}
