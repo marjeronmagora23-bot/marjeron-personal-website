@@ -429,11 +429,17 @@ document.getElementById("visitorCount").innerHTML =
 
 </script>
 
-
-
 <script type="module">
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-import { getDatabase } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+import { 
+getDatabase, 
+ref, 
+push, 
+onValue 
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyASrq0141Uq20up-7YURruddFHSLvPJK_A",
@@ -445,13 +451,19 @@ const firebaseConfig = {
   appId: "1:163353916993:web:d367c6cab24e32d9bfb8c0"
 };
 
+
 const app = initializeApp(firebaseConfig);
 
-window.database = getDatabase(app);
+const database = getDatabase(app);
 
-// Tell script.js Firebase is ready
-window.dispatchEvent(new Event("firebaseReady"));
+
+window.database = database;
+window.ref = ref;
+window.push = push;
+window.onValue = onValue;
+
 
 </script>
 
 <script type="module" src="script.js"></script>
+
