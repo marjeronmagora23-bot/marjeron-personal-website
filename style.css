@@ -641,3 +641,29 @@ section h2 {
     }
 
 }
+/* THEME BUTTON */
+
+#themeToggle{
+    background:#00eaff;
+    color:#000;
+    border:none;
+    padding:10px 15px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+#themeToggle:hover{
+    transform:scale(1.1);
+}
+
+.light-mode{
+    background:#f5f5f5;
+    color:#111;
+}
+
+.light-mode header,
+.light-mode footer{
+    background:#ffffff;
+}
