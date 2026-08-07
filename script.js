@@ -252,3 +252,15 @@ setTimeout(() => {
     });
 
 }
+// CYBER CURSOR
+
+const cursorGlow = document.getElementById("cursorGlow");
+
+document.addEventListener("mousemove",(e)=>{
+
+    if(!cursorGlow) return;
+
+    cursorGlow.style.left = e.clientX + "px";
+    cursorGlow.style.top = e.clientY + "px";
+
+});
