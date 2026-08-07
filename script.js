@@ -113,24 +113,29 @@ if(shareBtn){
 // =====================
 // FIREBASE COMMENTS
 // =====================
+ 
 
-window.addEventListener("firebaseReady", () => {
 
 const postComment = document.getElementById("postComment");
 const commentInput = document.getElementById("commentInput");
 const comments = document.getElementById("comments");
 
+
 if(postComment){
 
-postComment.onclick = () => {
+postComment.onclick = function(){
 
 const text = commentInput.value;
 
+
 if(text.trim() !== ""){
 
-push(ref(window.database,"comments"), {
+push(ref(window.database,"comments"),{
+
 message:text
+
 });
+
 
 commentInput.value="";
 
@@ -145,23 +150,26 @@ if(comments){
 
 onValue(ref(window.database,"comments"),(snapshot)=>{
 
+
 comments.innerHTML="";
+
 
 snapshot.forEach((child)=>{
 
+
 const p=document.createElement("p");
 
-p.textContent="💬 "+child.val().message;
+p.textContent="💬 " + child.val().message;
 
 comments.appendChild(p);
 
+
 });
+
 
 });
 
 }
-
-});
             
 
             
